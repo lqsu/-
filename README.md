@@ -145,7 +145,7 @@ docker run \
 启用`--accountSn`表示账户序号，例如`1,2`, 则将提取`option-sn`选项的值，例如`user-1`,`user-2`
 
 ### 配置文件示例
-启用`--config /path/to/mycfg.json`表示配置文件
+启动`--config /path/to/mycfg.json`表示配置文件
 ```json
 {
     "accountSn": "1,2",
