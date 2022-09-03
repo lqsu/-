@@ -1,3 +1,18 @@
+# 构建
+docker build -t auto-sign-machine:latest  -f docker/Dockerfile .
+# 运行(cookies和账号密码两种方式二选一)
+docker run \
+  --name auto-sign-machine \
+  -d \
+  --label traefik.enable=false \
+  -e enable_unicom=true \
+  -e user=15694867110\
+  -e password=199971 \
+  -e appid=247b001385de5cc6ce11731ba1b1583580b8159e5a51c4abd601e8fc1f8b2b87acf2234bc8a8487cb751a33da268d93d6c111416b0572de9880fc4ae86370754c30c206b71c709096316550b519b8394 \
+  auto-sign-machine:latest
+
+
+
 FROM alpine:latest
 
 WORKDIR /AutoSignMachine/
